@@ -81,7 +81,9 @@ function random_color() {
 
 
 function fancy_style() {
-    search_box.style.width = panel_ctn.offsetWidth + "px";
+    if( panel_ctn.offsetWidth > 260) {
+        search_box.style.width = panel_ctn.offsetWidth + "px";
+    }
     html.style.setProperty('--color', random_color());
 }
 
